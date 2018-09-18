@@ -1,0 +1,185 @@
+body {
+    background: #f9e933; 
+    margin: auto;
+}
+
+header, main, footer {
+    min-width: 855px; 
+}
+
+header .container, main .container, footer .container {
+    max-width: 855px;
+    margin: auto; 
+}
+
+header {
+    background: white;
+    overflow: auto;
+}
+
+header h1 {
+    float: left; 
+    width: 570px;
+    font-size: 300%; 
+    font-style: italic;
+    color: green;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+header nav {
+    float: right;
+    width: 285px;  
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+main {
+    background: white;
+    overflow: auto;
+}
+
+main h2 {
+    float: left;
+    width: 570px; 
+}
+
+main p {
+    float: left; 
+    width: 570px; 
+}
+
+main h3 {
+    float: left; 
+    width: 570px; 
+}
+
+main ul {
+    float: left;
+    width: 570px; 
+} 
+
+main img {
+    float: right;
+    width: 285px; 
+}
+
+.contact {
+    float: left;
+    width: 570px; 
+}
+
+.contact h5 {
+    font-size: large;
+    font-weight: bold; 
+    margin-top: 30px; 
+    margin-bottom: 20px; 
+}
+
+.contact p:first-of-type {
+    color: green;
+    font-style: italic;
+    font-size: large;
+}
+
+.sitemap {
+    float: right;
+    width: 285px; 
+}
+
+.sitemap h5 {
+    font-size: large;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 20px; 
+}
+
+.tabs a span {
+    display: inline-block;
+    border-radius: 5px 5px 0 0;
+    width: 100px;
+    margin-right: 10px;
+    text-align: center;
+    background: #ddd;
+    padding: 5px; 
+}
+
+.tabs a span.active {
+    background: #eee; 
+}
+
+.content {
+    width: 855px; 
+    margin-bottom: 10px; 
+    float: left;
+    background: #eee; 
+    border-bottom-left-radius: 5px; 
+    border-bottom-right-radius: 5px; 
+    border-top-right-radius: 5px; 
+}
+
+.content ul {
+    width: 835px; 
+    margin: 10px; 
+}
+
+.content li {
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px; 
+    margin-right: 10px; 
+    margin-left: 10px;  
+    border-radius: 5px; 
+    padding: 5px; 
+    background: white; 
+}
+
+.content input {
+    width: 230px; 
+    height: 30px; 
+    border: 1px solid gray; 
+    border-radius: 5px; 
+    margin-top: 10px;
+    margin-left: 10px; 
+    margin-bottom: 10px; 
+    margin-right: 10px;  
+    float: left; 
+}
+
+.content p {
+    height: auto; 
+    width: 855px; 
+    margin-top: 10px;
+    margin-bottom: 5px; 
+    margin-left: 10px; 
+    margin-right: 10px; 
+    color: gray; 
+}
+
+.content button {
+    width: 30px; 
+    height: 30px; 
+    border-radius: 5px; 
+    background-color: gray; 
+    color: white; 
+    font-size: large; 
+    margin-top: 90px; 
+    margin-bottom: 10px; 
+}
+
+footer .sitemap ul {
+    width: 230px; 
+}
+
+footer .sitemap li {
+    list-style: none;
+    width: 115px; 
+    margin: auto;
+}
+footer .sitemap .left {
+    float: left;
+}
+
+footer .sitemap .right {
+    float: right;
+}
