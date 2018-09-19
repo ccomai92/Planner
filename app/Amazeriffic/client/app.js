@@ -1,4 +1,4 @@
-var main = function(toDoObjects) {
+var main = function() {
     "use strict"; 
 
     var toDos, tabs;  
@@ -115,7 +115,7 @@ var main = function(toDoObjects) {
                 
 
 
-                $content = $("<div>").append($inputLabel)
+                $content = $("<div>").addClass("index").append($inputLabel)
                     .append($input)
                     .append($tagLabel)
                     .append($tagInput)

@@ -156,15 +156,24 @@ main img {
     color: gray; 
 }
 
-.content button {
+.content .index button {
     width: 30px; 
     height: 30px; 
     border-radius: 5px; 
     background-color: gray; 
     color: white; 
     font-size: large; 
-    margin-top: 90px; 
+    margin-top: 95px; 
     margin-bottom: 10px; 
+}
+
+.content .login button {
+    width: auto;
+    height: 30px; 
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: gray; 
+    font-size: medium; 
 }
 
 footer .sitemap ul {
