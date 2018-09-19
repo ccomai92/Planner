@@ -64,13 +64,14 @@ app.use(express.urlencoded());
 
 http.createServer(app).listen(3000); 
 
-app.get("/todos.json", ToDosController.index); 
-app.get("/todos/:id", ToDosController.show); 
-app.post("/todos", ToDosController.create);
+app.get("/users/:username/todos.json", ToDosController.index);  
+app.post("/users/:username/todos", ToDosController.create);
+app.put("/users/:username/todos/:id", ToDosController.update);
+app.del("/users/:username/todos/:id", ToDosController.destroy);
 
 
-app.get("/users/json", usersController.index); 
+app.get("/users.json", usersController.index); 
 app.post("/users", usersController.create); 
-app.get("users/:username", usersController.show);
-app.put("users/:username", usersController.update);
-app.del("users/:username", usersController.destroy); 
+app.get("/users/:username", usersController.show);
+app.put("/users/:username", usersController.update);
+app.del("/users/:username", usersController.destroy); 

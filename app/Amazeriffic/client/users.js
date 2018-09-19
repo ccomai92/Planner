@@ -15,11 +15,14 @@ var main = function() {
             "id": $inputId.val()
         }; 
         $.post("/users", id, function(result) {
-            alert("Successfully created account");
+            alert(result);
             console.log(result); 
             // $button.trigger("click"); 
+            $inputId.val(""); 
         }).fail(function(jqXHR, textStatus, error) {
-            alert(error);
+            console.log(jqXHR); 
+            console.log(textStatus); 
+            console.log(error.constructor.name); 
             $inputId.val(""); 
         });
     }); 
@@ -32,9 +35,13 @@ var main = function() {
         $.get(url, id, function(result) {
             // $inputPw.val(""); 
             // console.log(result); 
-            
+            window.location = "http://localhost:1234?" + url; 
             // for now 
-            window.location.replace("http://localhost:1234"); 
+            var $aTag = $("<a>");
+            $aTag.attr("href", "javascript:window.location"); 
+            $aTag.text("Go to main page");  
+            $("main .content").append($aTag); 
+            
         
         }).fail(function(jqXHR, textStatus, error) {
             alert(error);
