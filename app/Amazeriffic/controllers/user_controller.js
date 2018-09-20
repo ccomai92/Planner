@@ -11,13 +11,13 @@ UserController.index = function(req, res) {
 
 UserController.show = function(req, res) {
     console.log("show action called"); 
-    console.log(req.params.username); 
+    // console.log(req.params.username); 
     User.find({"username": req.params.username}, function(err, result) {
         if (err) {
             console.log(err);
             res.send(500, err);
         } else if (result.length !== 0) {
-            res.sendfile("./client/index.html"); 
+            res.send(200); 
         } else {
             res.send(404); 
         }

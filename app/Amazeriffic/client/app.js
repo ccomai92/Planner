@@ -28,12 +28,32 @@ var main = function() {
         "content": function(callback) {
             $.getJSON(query + "/todos.json", function(toDoObjects) {
                 toDos = toDoObjects.map(function(toDo) {
-                    return toDo.description;
+                    return toDo;
                 });
                 var $content; 
                 $content = $("<ul>"); 
                 for (var i = toDos.length - 1; i >= 0; i--) {
-                    $content.append($("<li>").text(toDos[i])); 
+                    $content.append($("<li>").text(toDos[i].description));
+                    var $todoRemoveLink = $("<a>").attr("href", "javascript:void(0)");
+                    $todoRemoveLink.text("x");
+                    $content.append($todoRemoveLink); 
+                    var id = toDos[i]._id; 
+
+                    $todoRemoveLink.on("click", function() {
+                        console.log(id); 
+                        $.ajax({
+                            url: query + '/todos/' + id,
+                            type: "DELETE"
+                        }).done(function(response) {
+                            // erase the DOM 
+                            console.log(response);
+                            $(".tabs a:first span").trigger("click"); 
+                        }).fail(function(err) {
+                            alert(err);  
+                        });
+                    });
+
+                    $content.append($todoRemoveLink); 
                 }
                 callback(null, $content); 
             }).fail(function(jqXHR, textStatus, error) {
@@ -47,12 +67,32 @@ var main = function() {
         "content": function(callback) {
             $.getJSON(query + "/todos.json", function(toDoObjects) {
                 toDos = toDoObjects.map(function(toDo) {
-                    return toDo.description;
+                    return toDo;
                 });
                 var $content; 
                 $content = $("<ul>"); 
                 for (var i = 0; i < toDos.length; i++) {
-                    $content.append($("<li>").text(toDos[i])); 
+                    $content.append($("<li>").text(toDos[i].description));
+                    var $todoRemoveLink = $("<a>").attr("href", "javascript:void(0)");
+                    $todoRemoveLink.text("x");
+                    $content.append($todoRemoveLink); 
+                    var id = toDos[i]._id; 
+
+                    $todoRemoveLink.on("click", function() {
+                        console.log(id); 
+                        $.ajax({
+                            url: query + '/todos/' + id,
+                            type: "DELETE"
+                        }).done(function(response) {
+                            // erase the DOM 
+                            console.log(response);
+                            $(".tabs a:second span").trigger("click"); 
+                        }).fail(function(err) {
+                            alert(err);  
+                        });
+                    });
+                    $content.append($todoRemoveLink); 
+                     
                 }
                 callback(null, $content); 
             }).fail(function(jqXHR, textStatus, error) {

@@ -20,9 +20,9 @@ var main = function() {
             // $button.trigger("click"); 
             $inputId.val(""); 
         }).fail(function(jqXHR, textStatus, error) {
-            console.log(jqXHR); 
-            console.log(textStatus); 
-            console.log(error.constructor.name); 
+            //console.log(jqXHR); 
+            // console.log(textStatus); 
+            //console.log(error.constructor.name); 
             $inputId.val(""); 
         });
     }); 

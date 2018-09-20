@@ -64,11 +64,22 @@ ToDosController.create = function(req, res) {
 }; 
 
 ToDosController.update = function(req, res) {
-
+    console.log("todoController update called"); 
 };
 
 ToDosController.destroy = function(req, res) {
-
+    console.log("todoController destroy called"); 
+    var username = req.params.username; 
+    var objectId = req.params.id; 
+    // console.log(username); 
+    // console.log(objectId); 
+    ToDo.remove({"_id": objectId}, function(err, result) {
+        if (err) {
+            res.send(500, err); 
+        } else {
+            res.send(200); 
+        }
+    });
 }; 
 
 /*

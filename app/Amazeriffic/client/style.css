@@ -124,16 +124,22 @@ main img {
 }
 
 .content li {
-    margin: auto;
+    float: left;
+    width: 570px;
     margin-top: 5px;
     margin-bottom: 5px; 
-    margin-right: 10px; 
+    margin-right: 0px; 
     margin-left: 10px;  
     border-radius: 5px; 
     padding: 5px; 
     background: white; 
 }
 
+.content a {
+    float: right;
+    width: 100px; 
+    margin-top: 10px; 
+}
 .content input {
     width: 230px; 
     height: 30px; 
